@@ -50,7 +50,7 @@ const totalPages = Math.ceil(Array.isArray(allCars) ? allCars.length / pageSize 
 const paginatedCars = Array.isArray(allCars) ? allCars.slice((page - 1) * pageSize, page * pageSize) : [];
 ---
 
-<Layout pageTitle={`Cars | ${siteName}`} description="Explore our range of cars for sale.">
+<Layout pageTitle={`Cars - ${siteName}`} description="Explore our range of cars for sale.">
 	<Section class:list={"bg-gray-50 max-lg:max-w-svw max-lg:overflow-hidden"}>
 		<Container class:list={"pt-0 max-lg:px-0 max-lg:max-w-full"}>
 			<div class="flex flex-col lg:flex-row">
