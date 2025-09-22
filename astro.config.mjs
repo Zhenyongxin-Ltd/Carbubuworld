@@ -16,8 +16,12 @@ export default defineConfig({
     devToolbar: {
         enabled: false,
     },
-    adapter: cloudflare(),
+    adapter: cloudflare({
+     imageService: 'cloudflare'
+    }),
     vite: {
-        plugins: [tailwindcss()],
+        ssr: {
+              external: ['node:buffer'],
+         },
     },
 });
