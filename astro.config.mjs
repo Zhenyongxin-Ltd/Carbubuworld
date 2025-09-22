@@ -17,7 +17,7 @@ export default defineConfig({
         enabled: false,
     },
     adapter: cloudflare({
-     imageService: 'cloudflare'
+     imageService: 'compile'
     }),
     vite: {
         ssr: {
