@@ -20,8 +20,9 @@ export default defineConfig({
      imageService: 'compile'
     }),
     vite: {
-        ssr: {
-              external: ['node:buffer'],
-         },
+         plugins: [tailwindcss()],
+         ssr: {
+             external: ['node:buffer'],
+           },
     },
 });
