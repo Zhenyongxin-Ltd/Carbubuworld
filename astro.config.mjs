@@ -5,17 +5,19 @@ import playformInline from "@playform/inline";
 import netlify from "@astrojs/netlify";
 import tailwindcss from "@tailwindcss/vite";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://carbubu.netlify.app",
-	base: "/",
-	integrations: [mdx(), playformInline({ Critters: true })],
-	output: "static",
-	devToolbar: {
-		enabled: false,
-	},
-	adapter: netlify(),
-	vite: {
-		plugins: [tailwindcss()],
-	},
+    site: "https://carbubu.netlify.app",
+    base: "/",
+    integrations: [mdx(), playformInline({ Critters: true })],
+    output: "static",
+    devToolbar: {
+        enabled: false,
+    },
+    adapter: cloudflare(),
+    vite: {
+        plugins: [tailwindcss()],
+    },
 });
